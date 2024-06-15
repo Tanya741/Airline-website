@@ -1,0 +1,99 @@
+.fds {
+    border-radius: 10px;
+    /* height: 40px; */
+    width: 100%;
+    border: 1px solid #cccccc;
+    margin-top: 1rem;
+    padding: 0 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fds:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.fds:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.prices {
+    border-radius: 20px;
+    height: 40px;
+    padding: 0 1rem;
+    border: 1px solid #cccccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+.prices:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.fd-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for div inside fd-main */
+.fd-main > div {
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fd-main > div:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .fd-main > div {
+        width: 80%;
+    }
+}
+
+@media (max-width: 992px) {
+    .fd-main {
+        padding: 1rem;
+    }
+    .fd-main > div {
+        width: 90%;
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .fd-main {
+        padding: 1rem;
+    }
+    .fd-main > div {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .fd-main {
+        padding: 0.5rem;
+    }
+    .fd-main > div {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}

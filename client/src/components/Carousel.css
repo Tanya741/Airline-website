@@ -1,0 +1,303 @@
+/* General styles */
+.main-pg-2-div-2 {
+    position: relative;
+    flex: 1;
+    width: 60%;
+    object-fit: cover;
+    margin-top: 0;
+}
+.main-pg-2-div-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    flex: 1;
+    color: white;
+}
+.main-pg-2-div-1>h1 {
+    padding: 2rem;
+    font-size: 5rem;
+}
+.main-pg-2-div-1>h3 {
+    line-height: 5rem;
+    padding: 2rem;
+    font-size: 6rem;
+}
+.main-pg-2-div-2>img {
+    margin: 0;
+    object-fit: cover;
+    background-size: cover;
+}
+.main-div1-div {
+    margin: 2rem;
+    z-index: 1;
+    width: 113%;
+    height: 100%;
+}
+.rBooking {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 113%;
+    height: 400px;
+    background-color: rgb(30, 30, 30);
+    margin-left: 80px;
+    margin-top: 100px;
+    border-radius: 8px;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    width: 63%;
+    height: 100%;
+    padding: 1rem;
+    background-color: rgb(30, 30, 30);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.toF {
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+.toF .left, .toF .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    color: white;
+    border-right: 1px solid white;
+}
+.toF .middle {
+    flex: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    color: aliceblue;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+.additional {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+    border-radius: 4px;
+    padding: 1rem;
+}
+.additional .box1 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 0.5rem;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+.additional .sep {
+    height: 100%;
+    opacity: 0.3;
+    border: 1px solid rgb(255, 251, 251);
+}
+.additional .sep2 {
+    height: 1px;
+    width: 50%;
+    opacity: 0.3;
+    border: 1px solid rgb(242, 241, 241);
+}
+.button-9 {
+    text-decoration: none;
+    align-self: center;
+    text-align: center;
+    background-color: rgb(1 97 159);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 15rem;
+    transition: 0.5s;
+}
+.button-9:hover {
+    background-color: white;
+    color: rgb(1 97 159);
+}
+
+/* Media Queries for Responsiveness */
+
+/* For small devices (600px and down) */
+
+@media screen and (max-width: 700px) {
+    .rBooking {
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        height: auto;
+        align-items: center;
+    }
+    .text{
+        width: 100%;
+        height: auto;
+    }
+    .image{
+        width: 60vw;
+        height: 60vh;
+    }
+    .toF {
+        flex-direction: column;
+        height: auto;
+    }
+    .toF .left, .toF .right, .toF .middle {
+        flex: 1;
+        border: none;
+        border-bottom: 1px solid white;
+        width: 100%;
+    }
+    .toF .left {
+        border-bottom: none;
+    }
+    .additional {
+        flex-direction: column;
+        height: auto;
+    }
+    .additional .box1 {
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+    .main-pg-2-div-1>h1 {
+        padding: 2rem;
+        font-size: 3rem;
+    }
+    .main-pg-2-div-1>h3 {
+        line-height: 3rem;
+        padding: 2rem;
+        font-size: 4rem;
+    }
+    .main-pg-2-div-2{
+        display: none;
+    }
+}
+
+/* For tablets (600px to 900px) */
+@media screen and (min-width: 700px) and (max-width: 900px) {
+    .rBooking {
+      
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        height: auto;
+        align-items: center;
+    }
+    .text{
+        width: 100%;
+        height: auto;
+    }
+    .image{
+        width:80%;
+        height: 60%;
+        object-fit: cover;
+    }
+    .main-pg-2-div-2{
+        display: none;
+    }
+    .toF {
+        flex-direction: column;
+        height: auto;
+    }
+    .toF .left, .toF .right, .toF .middle {
+        flex: 1;
+        border: none;
+        border-bottom: 1px solid white;
+        width: 100%;
+    }
+    .toF .left {
+        border-bottom: none;
+    }
+    .additional {
+        flex-direction: column;
+        height: auto;
+    }
+    .additional .box1 {
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+    .main-pg-2-div-1>h1 {
+        padding: 2rem;
+        font-size: 3rem;
+    }
+    .main-pg-2-div-1>h3 {
+        line-height: 4rem;
+        padding: 2rem;
+        font-size: 4rem;
+    }
+}
+
+/* For desktops and laptops (900px and up) */
+@media screen and (min-width: 900px) {
+    .rBooking {
+        flex-direction: row;
+        width: 100%;
+        margin-left: 80px;
+        margin-top: 100px;
+        height: 400px;
+    }
+    .text {
+        width: 63%;
+    }
+    .image {
+        width: 37%;
+    }
+    .toF {
+        flex-direction: row;
+        height: 20%;
+    }
+    .toF .left, .toF .right {
+        border-right: 1px solid white;
+    }
+    .toF .middle {
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+    }
+    .additional {
+        flex-direction: row;
+        height: 70%;
+    }
+    .additional .box1 {
+        margin: 0 0.5rem;
+        width: auto;
+    }
+}
+@media screen and (max-width: 400px) {
+    .image{
+        width: 100%;
+        height: 60vh;
+    }
+}

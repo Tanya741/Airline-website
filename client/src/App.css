@@ -1,0 +1,132 @@
+body{
+  overflow-x: hidden;
+  /* background-color: white; */
+
+}
+
+.App {
+  text-align: center;
+}
+
+.carousel {
+    display: flex;
+    position: relative;
+    margin-top: 8rem ;
+    margin-bottom: 6rem ;
+    box-sizing: border-box;
+    /* height: 80vh; */
+   
+}
+.main-txt{
+  /* background-color: white; */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 3rem;
+  box-sizing: border-box;
+}
+
+.main-txt >h1{
+  font-size: 7vw;
+  line-height: 7vw;
+}
+.main-txt >h3{
+  font-size: 6.5vw;
+}
+
+
+/* App.css */
+.Item {
+  background-image: url('https://wallpapercrafter.com/desktop/215156-cloud-cloudscape-sky-and-cloudy-hd.jpg');
+  background-size: cover;
+  /* background-color: rgb(240 240 240); */
+  background-position: center;
+  width: 50%;
+  height: 38rem;
+  border-top-right-radius: 1000px; /* Adjust the value to your preference */
+  border-bottom-right-radius: 0px; /* Adjust the value to your preference */
+}
+
+.Item > img {
+  height: 35rem;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  position: relative;
+  left: 22vw;
+  top: -6rem;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .Item {
+    width: 75%; /* Adjust width for medium screens */
+    border-top-right-radius: 800px; /* Adjust the radius */
+  }
+
+  .Item > img {
+    left: 10vw; /* Adjust the positioning for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .Item {
+    width: 100%; /* Full width for small screens */
+    height: 25rem; /* Adjust height for small screens */
+    border-top-right-radius: 600px; /* Adjust the radius */
+  }
+
+  .Item > img {
+    height: 25rem; /* Adjust height for small screens */
+    left: 5vw; /* Adjust the positioning for small screens */
+    top: -4rem; /* Adjust the positioning for small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .Item {
+    height: 20rem; /* Adjust height for extra small screens */
+    border-top-right-radius: 400px; /* Adjust the radius */
+  }
+
+  .Item > img {
+    height: 20rem; /* Adjust height for extra small screens */
+    left: 2vw; /* Adjust the positioning for extra small screens */
+    top: -2rem; /* Adjust the positioning for extra small screens */
+  }
+}
+
+
+.nav-bar{
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  color: whitesmoke;
+  /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
+  
+}
+.main-pg{
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.main-pg-2{
+  display: flex;
+  flex-wrap: nowrap;
+  /* flex-direction: row-reverse; */
+  width: 100vw;
+  height: 100%;
+  background-color: rgb(0 3 8);
+ 
+  /* background-image: url('https://img.freepik.com/free-vector/world-map-business-infographic_52683-26898.jpg?t=st=1717862192~exp=1717865792~hmac=0af6de2496f44a15b429abbd531fe433712e9df31b6737adac0a169744a653f8&w=996'); */
+  object-fit: cover;
+  overflow: hidden;
+  /* background-size: cover; */
+  background-position: right;
+}

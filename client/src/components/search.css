@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+}
+
+/* Outer div with full-width, centered, rectangular shape */
+.search-container {
+    width: 100%;
+    max-width: 1200px; /* Limit the maximum width for better readability */
+    margin: 20px auto; /* Center the container and add margin from the top */
+    padding: 20px; /* Add padding for spacing within the container */
+    border: 1px solid #ccc; /* Add a light border */
+    border-radius: 8px; /* Slight rounding for better aesthetics */
+    background-color: #fff; /* White background for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+/* Upper Section */
+.search-upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-options button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-options button.active {
+    background-color: #0056b3;
+}
+
+.customer-support {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Lower Section */
+.search-lower {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Increased gap for better spacing */
+    margin-bottom: 20px;
+}
+
+.search-lower > div {
+    flex: 1;
+    min-width: 250px; /* Increased min-width for better spacing */
+}
+
+.from, .to, .departure-date, .return-date, .class-selection {
+    display: flex;
+    flex-direction: column;
+}
+
+.from input, .to input, .departure-date input, .return-date input, .class-selection select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button a {
+    text-decoration: none;
+    /* align-self: baseline; */
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button a:hover {
+    background-color: #218838;
+}
+
+/* Special Fares Section */
+.special-fares {
+    display: flex;
+    align-items: center;
+}
+
+.special-fares p {
+    margin-bottom: 10px;
+}
+
+.special-fares button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.special-fares button:hover {
+    background-color: #e0a800;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .search-upper, .search-lower, .special-fares {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-options button, .search-button button, .special-fares button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+

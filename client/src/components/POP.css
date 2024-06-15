@@ -1,0 +1,131 @@
+/* Container for all flight cards */
+.img {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out cards */
+    flex-wrap: wrap; /* Allow wrapping to next line */
+    background-color: #e0e0e0; /* Light grey background */
+    border-radius: 10px; /* Rounded corners */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Maximum width */
+    margin: 20px auto; /* Center the container */
+    padding: 20px; /* Inner padding for spacing */
+}
+
+/* Individual flight card */
+.img .card1 {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center vertically */
+    background-color: #f8f9fa; /* Light grey background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    padding: 0; /* Inner padding for spacing (top and bottom) */
+    margin: 10px; /* Margin between cards */
+    width: calc(33% - 20px); /* Ensure three cards fit per row */
+    max-width: calc(33% - 20px); /* Maximum width of each card */
+    min-width: 150px; /* Minimum width to ensure readability */
+    height: 120px; /* Reduced height of the card */
+    text-align: left; /* Align text to the left */
+}
+
+/* Image content inside card */
+.img .card1 .img-content {
+    flex: 0 0 auto; /* Ensure image container doesn't grow */
+    width: auto; /* Auto width for image container */
+    height: 100%; /* Adjust the height of the image container */
+    margin-right: 10px; /* Add right margin for spacing */
+}
+
+/* Image within image content */
+.img .card1 .img-content img {
+    height: 100%; /* Adjust the height of the image */
+    object-fit: cover; /* Ensure the image covers the container */
+    border-top-left-radius: 8px; /* Rounded corners for the image */
+    border-bottom-left-radius: 8px;
+}
+
+/* Text content inside card */
+.img .card1 .txt {
+    flex: 1; /* Allow text to grow */
+}
+
+/* Anchor tags within text */
+.img .card1 .txt a {
+    color: #333; /* Dark text color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* First paragraph within anchor tags */
+.img .card1 .txt a p:first-child {
+    font-size: 16px; /* Normal font size */
+}
+
+/* Next paragraphs within anchor tags */
+.img .card1 .txt a p:not(:first-child) {
+    font-size: 12px; /* Smaller font size */
+    display: inline; /* Display in the same line */
+    margin: 0 5px; /* Add margin for spacing */
+}
+
+/* Container for domestic airlines */
+.domesticAirlines {
+    border: 0.2px solid rgb(59, 59, 59);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly; /* Evenly space out airlines */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow wrapping to next line if needed */
+    background-color: #f0f0f0; /* Light grey background */
+     /* Rounded corners */
+    padding: 20px; /* Inner padding for spacing */
+    margin: 20px auto; /* Center the container and add margin */
+    max-width: 1200px; /* Maximum width */
+    width: 100%; /* Full width */
+}
+
+/* Individual airline card */
+.cp {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin: 10px; /* Margin between cards */
+}
+
+/* Airline logo */
+.cp img {
+    width: 64px; /* Set width of logo */
+    height: 64px; /* Set height of logo */
+}
+
+/* Airline name */
+.cp p {
+    font-size: 14px; /* Font size for airline name */
+    margin-top: 5px; /* Margin from logo */
+    text-align: center; /* Center-align text */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .img .card1 {
+        width: calc(50% - 20px); /* Adjust width for two cards per row */
+        max-width: calc(50% - 20px); /* Maximum width of each card */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Further adjust styles for extra small screens */
+    .img .card1 {
+        width: calc(100% - 20px); /* Adjust width for one card per row */
+        max-width: calc(100% - 20px); /* Maximum width of each card */
+    }
+    .domesticAirlines {
+        padding: 10px; /* Reduce padding */
+    }
+    .cp {
+        margin: 10px 2px; /* Reduce margin between cards */
+    }
+    .cp img {
+        width: 50px; /* Decrease size of logo */
+        height: 50px; /* Decrease size of logo */
+    }
+}
