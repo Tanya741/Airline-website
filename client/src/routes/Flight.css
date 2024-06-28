@@ -1,99 +1,235 @@
-.fds {
-    border-radius: 10px;
-    /* height: 40px; */
-    width: 100%;
-    border: 1px solid #cccccc;
-    margin-top: 1rem;
-    padding: 0 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+body {
+
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+
+    padding: 20px;
+
+    background-color: #f5f5f5;
+
 }
 
-.fds:focus {
-    border-color: #007BFF;
-    outline: none;
-}
 
-.fds:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
 
-.prices {
-    border-radius: 20px;
-    height: 40px;
-    padding: 0 1rem;
-    border: 1px solid #cccccc;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.3s;
-}
-
-.prices:focus {
-    border-color: #007BFF;
-    outline: none;
-}
 
 .fd-main {
+
     display: flex;
+
     flex-direction: column;
-    justify-content: space-evenly;
+
     align-items: center;
+
+}
+
+
+
+
+.prices {
+
+    margin-bottom: 20px;
+
+}
+
+
+
+
+.flight-container {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    justify-content: center;
+
+}
+
+
+
+
+.flight-card {
+
     background-color: #ffffff;
-    padding: 2rem;
+
     border-radius: 10px;
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    padding: 20px;
+
+    width: 300px;
+
+    margin: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+
 }
 
-/* Styles for div inside fd-main */
-.fd-main > div {
-    border: 1px solid #cccccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
+
+
+
+.flight-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+
+.flight-info p {
+
+    margin: 5px 0;
+
+    color: #555;
+
+}
+
+
+
+
+.flight-info p strong {
+
+    color: #333;
+
+}
+
+
+
+
+.book-button {
+
+    background-color: #007bff;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 10px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+
+    margin-top: 15px;
+
+    align-self: center;
+
+    width: 80%;
+
+}
+
+
+
+
+.book-button:hover {
+
+    background-color: #0056b3;
+
+}
+
+
+
+
+.no-data {
+
+    font-size: 1.2em;
+
+    color: #777;
+
+    text-align: center;
+
+}
+
+
+
+
+/* Modal Styles */
+
+.modal {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: fixed;
+
+    z-index: 1;
+
+    left: 0;
+
+    top: 0;
+
     width: 100%;
-    max-width: 800px;
-    margin: 2rem;
-    padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+
+    height: 100%;
+
+    overflow: auto;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
 }
 
-.fd-main > div:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+
+
+.modal-content {
+
+    background-color: #fff;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    width: 400px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+    text-align: center;
+
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
-    .fd-main > div {
-        width: 80%;
-    }
+
+
+
+.close {
+
+    color: #aaa;
+
+    float: right;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
 }
 
-@media (max-width: 992px) {
-    .fd-main {
-        padding: 1rem;
-    }
-    .fd-main > div {
-        width: 90%;
-        margin: 1rem;
-    }
-}
 
-@media (max-width: 768px) {
-    .fd-main {
-        padding: 1rem;
-    }
-    .fd-main > div {
-        width: 100%;
-        margin: 1rem 0;
-    }
-}
 
-@media (max-width: 576px) {
-    .fd-main {
-        padding: 0.5rem;
-    }
-    .fd-main > div {
-        width: 100%;
-        margin: 1rem 0;
-    }
+
+.close:hover,
+
+.close:focus {
+
+    color: #000;
+
 }

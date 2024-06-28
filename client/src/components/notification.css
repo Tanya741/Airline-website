@@ -1,0 +1,151 @@
+.notification-modal {
+
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    width: 400px; /* Adjust as needed */
+
+    height: 100%;
+
+    background-color: #fff;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    overflow-y: auto; /* Enable scroll when content exceeds height */
+
+    z-index: 1000;
+
+    transform: translateX(100%);
+
+    transition: transform 0.3s ease-in-out;
+
+    padding: 20px; /* Move padding here from .notification-modal-content */
+
+  }
+
+  
+
+  .notification-modal.show {
+
+    transform: translateX(0);
+
+  }
+
+  
+
+  .notification-modal-content {
+
+    height: 100%;
+
+    
+
+    display: flex;
+
+    flex-direction: column;
+
+  }
+
+  
+
+  .notification-modal-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+
+  }
+
+  
+
+  .notification-list {
+
+    flex: 1;
+
+    overflow-y: auto; /* Ensure scroll inside the modal content */
+
+    padding-right: 10px; /* Adjust for scrollbar space */
+
+  }
+
+  
+
+  .notification-items {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+  }
+
+  
+
+  .notification-item {
+
+    background-color: #f9f9f9;
+
+    padding: 15px; /* Increase padding for better spacing */
+
+    border-radius: 8px; /* Slightly rounder corners */
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    transition: background-color 0.3s ease;
+
+  }
+
+  
+
+  .notification-item:hover {
+
+    background-color: #ebebeb; /* Lighten background on hover */
+
+  }
+
+  
+
+  .notification-item p {
+
+    margin: 8px 0; /* Adjust spacing between paragraphs */
+
+    line-height: 1.4; /* Improve readability with slightly increased line height */
+
+  }
+
+  
+
+  .error {
+
+    color: red;
+
+  }
+
+  
+
+  .close {
+
+    cursor: pointer;
+
+    font-size: 24px;
+
+    color: #aaa;
+
+    transition: color 0.3s ease;
+
+  }
+
+  
+
+  .close:hover {
+
+    color: #333; /* Darken close icon on hover */
+
+  }

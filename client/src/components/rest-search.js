@@ -1,6 +1,11 @@
+import { useReducer, useRef } from 'react';
 import './POP.css';
+import axios  from 'axios'
+import Review from './review';
 
 export default function Pop() {
+    
+    
     return (
         <>
         <div className="flight">
@@ -113,6 +118,8 @@ export default function Pop() {
 
 
         </div>
+        <Review/>
+        
         </>
     );
 }
